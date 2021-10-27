@@ -56,7 +56,7 @@ def postsignup(request):
         tomail = [f'{email}']
         # sendmailtask.delay(sub, content, tomail)
 
-        send_mail(sub, content, settings.EMAIL_HOST_USER, tomail)
+        # send_mail(sub, content, settings.EMAIL_HOST_USER, tomail)
         return redirect('application:applogin')
     return redirect('application:appsignup')
 

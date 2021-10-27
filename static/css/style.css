@@ -56,9 +56,34 @@
 
 /* Details */
 .user-data-head,
-.instructuion-data-head{
+.instructuion-data-head,
+.declaration-data-head{
     font-size: 1.75rem;
     font-weight: 600;
+}
+
+.more-info {
+    font-weight: 600;
+}
+
+.agreement-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.agreement-box input {
+    width: 24px;
+    height: 24px;
+}
+
+.agreement-box label {
+    margin: 0;
 }
 
 .brief{
@@ -86,7 +111,6 @@
 .instruction-list{
     padding: 0;
     margin-left: 1rem;
-    margin-bottom: 1rem;
 }
 
 .instruction-list li{
@@ -94,6 +118,17 @@
 }
 
 /* Overlay section */
+.start-test:disabled {
+    background-color: #999;
+    box-shadow: none;
+    cursor: none;
+}
+
+.start-test:disabled:hover {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
 .start-test-info{
     position: absolute;
     top: 0;

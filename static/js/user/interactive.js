@@ -32,14 +32,29 @@ try{
 
 // Instruction Components
 try{
-    // Continue/Start
+    // Declaration View check
+    const declaration = document.querySelector('#declartion');
     const startBtn = document.querySelector('.start-test');
+    // Continue/Start
     const startDiv = document.querySelector('.start-test-info');
     const cancelNo = document.querySelector('.cancel-no');
 
-    startBtn.addEventListener('click', (e)=>{
+    const declarationChange = (e) => {
+        const agreed = e.target.checked;
+        startBtn.disabled = !agreed;
+
+        if (agreed) {
+            return startBtn.addEventListener('click', openStartDiv);
+        }
+
+        return startBtn.removeEventListener('click', openStartDiv)
+    }
+
+    const openStartDiv = () => {
         startDiv.style.display = 'flex';
-    });
+    }
+
+    declaration.addEventListener('change', declarationChange)
 
     cancelNo.addEventListener('click', (e)=>{
         startDiv.style.display = 'none';
@@ -48,3 +63,4 @@ try{
 }catch(err){
     console.log('err');
 }
+
