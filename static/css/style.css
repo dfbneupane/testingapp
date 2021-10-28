@@ -2,7 +2,7 @@
 
 .app{
     background-color: #f7f7f7;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -130,7 +130,7 @@
 }
 
 .start-test-info{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
